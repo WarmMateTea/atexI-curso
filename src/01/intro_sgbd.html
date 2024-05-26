@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../../dist/output.css" rel="stylesheet">
+</head>
+<body>
+    <div class="sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10  bg-white/95 supports-backdrop-blur:bg-white/60 ">
+        <div class="max-w-8xl mx-auto">
+            <div class="py-4 border-b border-slate-900/10 lg:px-8 lg:border-0 mx-4 lg:mx-0">
+                <div class="relative flex items-center">
+                    <a class="mr-3 flex-none w-[2.0625rem] min-w-fit overflow-hidden md:w-auto">
+                        <img class="max-h-14" src="../static/unifenas masked.png"> <!-- unifenas logo e tal -->
+                    </a>
+                    <a class=" text-sm leading-5 font-medium text-sky-600  bg-sky-400/10 rounded-full py-1 ml-24  px-3 hidden xl:flex items-center hover:bg-sky-400/20">
+                        Minicurso - Introdução ao SQL<!-- link que leva pra home do minicurso-->
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="overflow-hidden">
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 md:px-8">
+            <!-- índice e capítulos -->
+            <div class="hidden lg:block fixed z-20 inset-0 top-[3.8125rem] left-[max(0px,calc(50%-52rem))] right-auto w-[19rem] pt-5 pb-10 pl-8 pr-6 overflow-y-auto">
+                <nav class="lg:text-sm lg:leading-6 relative">
+                    <ul>
+                        <li class="mt-12 lg:mt-8">
+                            <h5 class="mb-8 lg:mb-3 font-semibold text-slate-900"><a href="../base/index.html">Introdução ao SQL</a></h5>
+                        </li>
+
+                        <br>
+                        <li class="mt-12 lg:mt-8">
+                            <h5 class="mb-8 lg:mb-3 font-semibold text-slate-900 ">Unidade 01</h5>
+                            <ul class="space-y-6 lg:space-y-2 border-l border-slate-100">
+                                <li data-active="true">
+                                    <a class="block border-l pl-4 -ml-px border-transparent text-slate-700 hover:border-slate-400    hover:text-slate-900 " href="../01/intro_sql.html">Introdução à Linguagem SQL</a>
+                                </li>
+                                <li>
+                                    <a class=" block border-l pl-4 -ml-px text-sky-500 border-current font-semibold " href="../01/intro_sgbd.html">Introdução ao Sistema Gerenciador de Banco de Dados (SGBD)</a>
+                                </li>
+                                <li>
+                                    <a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400  text-slate-700 hover:text-slate-900 " href="../01/exercicios.html">Exercícios de Fixação</a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <br>
+                        <li class="mt-12 lg:mt-8">
+                            <h5 class="mb-8 lg:mb-3 font-semibold text-slate-900 ">Unidade 02</h5>
+                            <ul class="space-y-6 lg:space-y-2 border-l border-slate-100">
+                                <li>
+                                    <a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400  text-slate-700 hover:text-slate-900" href="../02/comandos.html">Apresentação dos Comandos Para Definição de Estruturas e Manipulação de Dados (DQL/DML/DDL/DCL/DTL)</a>
+                                </li>
+                                <li>
+                                    <a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400  text-slate-700 hover:text-slate-900" href="../02/exercicios.html">Exercícios de Fixação</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- conteúdo -->
+            <div class="lg:pl-[19.5rem]">
+                <main id="intro" class="flex-wrap max-w-3xl mx-auto pt-10 pl-14 xl:max-w-none xl:ml-0 xl:mr-[15.5rem] xl:pr-16">
+                    <header class="mb-10 md:flex md:items-start">
+                        <div class="flex-auto max-w-4xl">
+                            <!-- título da unidade -->
+                            <p class="mb-4 text-sm leading-6 font-semibold text-sky-500 ">Unidade 01</p>
+                            <!-- título do capítulo-->
+                            <h1 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight ">Introdução ao Sistema Gerenciador de Banco de Dados (SGBD)</h1>
+                            <!-- texto comum -->
+                            <p class="mt-4 text-lg text-slate-700 ">Para gerenciar bases de dados, existem softwares especializados conhecidos como Sistemas Gerenciadores de Banco de Dados (SGBD). O objetivo global desses sistemas é manter as informações e torná-las disponíveis quando solicitadas.</p>
+                            <p class="mt-4 text-lg text-slate-700 ">Em suma, um SGBD é o conjunto de programas de computador (softwares) responsáveis pelo gerenciamento de bases de dados. O principal objetivo é retirar da aplicação cliente a responsabilidade de gerenciar o acesso, manipulação e organização dos dados.</p>
+                            <p class="mt-4 text-lg text-slate-700 ">O SGBD disponibiliza uma interface para que os seus clientes possam incluir alterar ou consultar dados. Podemos dizer que situações clássicas como uma lista telefônica, um catálogo de DVDs ou um sistema de controle de RH (recursos humanos) de uma empresa são exemplos de sistemas que utilizam bancos de dados.</p>
+                            <br>
+                            <div class="grid justify-center items-center">
+                                <div class="flex-column self-center max-w-fit">
+                                    <img src="../static/imagem_intro_sgbd1.jpg">
+                                    <p class="text-sm">https://materialpublic.imd.ufrn.br/curso/disciplina/3/73/1/4</p>
+                                </div>
+                            </div>
+                            <br><br> 
+
+                            <!-- título da seção-->
+                            <h2 id="components" class="text-xl sm:text-xl font-semibold text-slate-900 tracking-tight ">Componentes de um SGBD</h2>
+                            <!-- texto comum -->
+                            <p class="mt-4 text-lg text-slate-700 ">Alguns componentes relevantes de um SGBD incluem a <b>Linguagem de Definição de Dados (DDL)</b> para especificar o esquema do banco de dados, a <b>Linguagem de Manipulação de Dados (DML)</b> para manipular dados, e os aspectos de segurança, concorrência e independência.</p>
+                            <p class="mt-4 text-lg text-slate-700 ">Todas as solicitações de um usuário ao banco de dados são controladas pelo SGBD. Ele implementa a abstração do hardware para o usuário, em outras palavras, ele “esconde” do usuário os detalhes mais internos da máquina e, também, do banco de dados, facilitando a utilização destes conforme a imagem ilustrativa abaixo.</p>
+                            <br>
+                            <div class="grid justify-center items-center">
+                                <div class="flex-column self-center max-w-fit">
+                                    <img src="../static/sgbd_intro_sgbd_2.png">
+                                    <a class="text-sm" href="https://sae.unb.br/cae/conteudo/unbfga/sbd/new_bancosgbd.html#:~:text=Alguns%20componentes%20relevantes%20de%20um,de%20seguran%C3%A7a%2C%20concorr%C3%AAncia%20e%20independ%C3%AAncia">(fonte)</a>
+                                </div>
+                            </div>
+                            <br><br>
+
+                            <!-- título da seção-->
+                            <h2 id="types" class="text-xl sm:text-xl font-semibold text-slate-900 tracking-tight ">Tipos de SGBDs:</h2>
+                            <!-- texto comum -->
+                            <p class="mt-4 text-lg text-slate-700 ">Existem dois tipos de SGBDs: Os relacionais e os não-relacionais (NoSQL).</p>
+                            <p class="mt-4 text-lg text-slate-700 ">Relacionais – Os SGBDs relacionais são bancos de dados que modelam os dados no formato de tabelas, que podem se relacionar entre si. Cada tabela pode possuir diversos atributos, com diversos tipos de dados.</p>
+                            <p class="mt-4 text-lg text-slate-700 ">Não-relacionais (NoSQL) – NoSQL (Not Only SQL) é o termo utilizado para bancos de dados não relacionais de alto desempenho, onde geralmente não é utilizado o SQL como linguagem de consulta. Estes bancos utilizam diversos modelos de dados, incluindo documentos, gráficos, chave-valor e colunares. São amplamente reconhecidos pela facilidade em seu desenvolvimento, desempenho escalável, alta disponibilidade e resiliência.</p>
+                            <br>
+                            <div class="grid justify-center items-center">
+                                <div class="flex-column self-center max-w-fit">
+                                    <img src="../static/imagem-sgbd_3.webp">
+                                    <a class="text-sm" href="https://www.dio.me/articles/diferenca-entre-banco-de-dados-relacional-e-nao-relacional-nosql">(fonte)</a>
+                                </div>
+                            </div>
+                            <br><br>
+
+                            <!-- título da seção-->
+                            <h2 id="main_sgbds" class="text-xl sm:text-xl font-semibold text-slate-900 tracking-tight ">Os principais SGBDs relacionais do mercado</h2>
+                            <!-- texto comum -->
+                            <p class="mt-4 text-lg text-slate-700 ">Existem diversos tipos de SGBDs no mercado, que atendem às mais diversas finalidades, como por exemplo o SQL Server, Oracle e PostgreSQL, além dos softwares livres, como o MySQL e o Firebird:</p>
+                            <br>
+                            <div class="grid justify-center items-center">
+                                <div class="flex-column self-center max-w-fit">
+                                    <img src="../static/sgbd_4.png">
+                                    <a class="text-sm" href="https://blog.betrybe.com/tecnologia/sgbd-tudo-sobre/">(fonte)</a>
+                                </div>
+                            </div>
+                            <br><br>
+
+                            <!-- título da seção-->
+                            <h2 id="which" class="text-xl sm:text-xl font-semibold text-slate-900 tracking-tight ">Qual SGBD utilizar em meu projeto?</h2>
+                            <!-- texto comum -->
+                            <p class="mt-4 text-lg text-slate-700 ">Seguem algumas dicas que podem te ajudar na hora de escolher qual SGBD utilizar em seu projeto:</p>
+                            <p class="mt-4 text-lg text-slate-700 ">
+                                - Analisar as principais características de cada SGBD;<br>
+                                - Conhecer o seu negócio e saber quais as necessidades que o SGBD deve suprir;<br>
+                                - Se existem profissionais especialistas em um determinado SGBD que irão trabalhar no projeto;<br>
+                                - Analisar os custos do projeto, entre outros.
+                                </p>
+                            <br><br>
+
+                            <!-- título da seção-->
+                            <h2 id="market" class="text-xl sm:text-xl font-semibold text-slate-900 tracking-tight ">Como está o mercado de trabalho para SQL?</h2>
+                            <!-- texto comum -->
+                            <p class="mt-4 text-lg text-slate-700 ">Vale ressaltar que muitas empresas geralmente possuem vários profissionais de dados diferentes, como os DBAs, Engenheiro de Dados, Analistas de Dados e daí por diante, e que cada um deles possui uma atuação diferente..</p>
+                            <p class="mt-4 text-lg text-slate-700 ">O mercado de trabalho para profissionais com habilidades em SQL permanece forte e com boas perspectivas.</p>
+                            <p class="mt-4 text-lg text-slate-700 ">Para se destacar no mercado de trabalho, é importante não apenas ter conhecimentos básicos em SQL, mas também estar atualizado com as tendências atuais em gerenciamento de dados, como NoSQL, Big Data, aprendizado de máquina e análise de dados.</p>
+                            <p class="mt-4 text-lg text-slate-700 ">Além disso, a combinação de habilidades em SQL com outras competências, como linguagens de programação, pode ser especialmente valiosa.</p>
+                            <p class="mt-4 text-lg text-slate-700 ">Esses são os pontos que você deve considerar sobre o mercado de trabalho para SQL:<br>
+                                - Demanda contínua;<br>
+                                - Funções diversas;<br>
+                                - Análise de dados;<br>
+                                - Gestão de dados;<br>
+                                - Salários competitivos;<br>
+                                - Setores diversos;<br>
+                                - Evolução constante.<br>
+                            </p>
+                            <br><br>
+                        </div>
+                    </header>
+
+                    <!-- conteúdo da página (links locais) -->
+                    <div class="fixed z-20 top-[3.8125rem] bottom-0 right-[max(0px,calc(50%-45rem))] w-[19.5rem] py-10 overflow-y-auto hidden xl:block">
+                        <div class="px-8">
+                            <h5 class="text-slate-900 font-semibold mb-4 text-sm leading-6 ">Conteúdo da página</h5>
+                            <ul class="text-slate-700 text-sm leading-6">
+                                <li>
+                                    <a href="#intro" class="block py-1 hover:text-slate-900 ">Overview</a>
+                                </li>
+                                <li>
+                                    <a href="#components" class="block py-1 hover:text-slate-900 ">Componentes de um SGBD</a>
+                                </li>
+                                <li>
+                                    <a href="#types" class="block py-1 hover:text-slate-900 ">Tipos de SGBDs</a>
+                                </li>
+                                <li>
+                                    <a href="#main_sgbds" class="block py-1 hover:text-slate-900 ">Principais SGBDs</a>
+                                </li>
+                                <li>
+                                    <a href="#which" class="block py-1 hover:text-slate-900 ">Qual SGBD usar?</a>
+                                </li>
+                                <li>
+                                    <a href="#market" class="block py-1 hover:text-slate-900 ">Mercado de Trabalho para SQL</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

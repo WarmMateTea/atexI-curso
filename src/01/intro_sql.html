@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../../dist/output.css" rel="stylesheet">
+</head>
+<body>
+    <div class="sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10  bg-white/95 supports-backdrop-blur:bg-white/60 ">
+        <div class="max-w-8xl mx-auto">
+            <div class="py-4 border-b border-slate-900/10 lg:px-8 lg:border-0 mx-4 lg:mx-0">
+                <div class="relative flex items-center">
+                    <a class="mr-3 flex-none w-[2.0625rem] min-w-fit overflow-hidden md:w-auto">
+                        <img class="max-h-14" src="../static/unifenas masked.png"> <!-- unifenas logo e tal -->
+                    </a>
+                    <a class=" text-sm leading-5 font-medium text-sky-600  bg-sky-400/10 rounded-full py-1 ml-24  px-3 hidden xl:flex items-center hover:bg-sky-400/20">
+                        Minicurso - Introdução ao SQL<!-- link que leva pra home do minicurso-->
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="overflow-hidden">
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 md:px-8">
+            <!-- índice e capítulos -->
+            <div class="hidden lg:block fixed z-20 inset-0 top-[3.8125rem] left-[max(0px,calc(50%-52rem))] right-auto w-[19rem] pt-5 pb-10 pl-8 pr-6 overflow-y-auto">
+                <nav class="lg:text-sm lg:leading-6 relative">
+                    <ul>
+                        <li class="mt-12 lg:mt-8">
+                            <h5 class="mb-8 lg:mb-3 font-semibold text-slate-900"><a href="../base/index.html">Introdução ao SQL</a></h5>
+                        </li>
+
+                        <br>
+                        <li class="mt-12 lg:mt-8">
+                            <h5 class="mb-8 lg:mb-3 font-semibold text-slate-900 ">Unidade 01</h5>
+                            <ul class="space-y-6 lg:space-y-2 border-l border-slate-100">
+                                <li data-active="true">
+                                    <a class="block border-l pl-4 -ml-px text-sky-500 border-current font-semibold " href="../01/intro_sql.html">Introdução à Linguagem SQL</a>
+                                </li>
+                                <li>
+                                    <a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400  text-slate-700 hover:text-slate-900 " href="../01/intro_sgbd.html">Introdução ao Sistema Gerenciador de Banco de Dados (SGBD)</a>
+                                </li>
+                                <li>
+                                    <a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400  text-slate-700 hover:text-slate-900 " href="../01/exercicios.html">Exercícios de Fixação</a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <br>
+                        <li class="mt-12 lg:mt-8">
+                            <h5 class="mb-8 lg:mb-3 font-semibold text-slate-900 ">Unidade 02</h5>
+                            <ul class="space-y-6 lg:space-y-2 border-l border-slate-100">
+                                <li>
+                                    <a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400  text-slate-700 hover:text-slate-900" href="../02/comandos.html">Apresentação dos Comandos Para Definição de Estruturas e Manipulação de Dados (DQL/DML/DDL/DCL/DTL)</a>
+                                </li>
+                                <li>
+                                    <a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400  text-slate-700 hover:text-slate-900" href="../02/exercicios.html">Exercícios de Fixação</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- conteúdo -->
+            <div class="lg:pl-[19.5rem]">
+                <main class="max-w-3xl mx-auto pt-10 pl-14 xl:max-w-none xl:ml-0 xl:mr-[15.5rem] xl:pr-16">
+                    <header class="mb-10 md:flex md:items-start">
+                        <div id="introduction" class="flex-auto max-w-4xl">
+                            <!-- título da unidade -->
+                            <p class="mb-4 text-sm leading-6 font-semibold text-sky-500 ">Unidade 01</p>
+                            <!-- título do capítulo-->
+                            <h1 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight ">Introdução à linguagem SQL</h1>
+                            <!-- texto comum -->
+                            <p class="mt-4 text-lg text-slate-700 ">SQL é uma linguagem padrão para trabalhar com bancos de dados relacionais. Por ser uma linguagem declarativa, ela é simples e não exige conhecimentos avançados de programação para o aprendizado.</p>
+                            <p class="mt-4 text-lg text-slate-700 ">É uma linguagem que profissionais que atuam com dados precisam aprender, como desenvolvedores, cientistas e engenheiros de dados, e além disso é uma linguagem universal e muito estável, podendo ser utilizada em qualquer parte do mundo.
+                            SQL é a sigla para Structured Query Language, que em português significa <b>Linguagem de consulta estruturada.</b>
+                            </p>
+                            <p class="mt-4 text-lg text-slate-700 ">A linguagem SQL é relativamente semelhante entre os principais Sistemas Gerenciadores de Banco de Dados (SGBDs) do mercado, como: Oracle, MySQL, PostgreSQL, Microsoft SQL Server, entre outros.</p>
+                            <br>
+                            <div class="grid justify-center items-center">
+                                <div class="flex-column self-center max-w-fit">
+                                    <img src="../static/sql1.jpg">
+                                    <a class="text-sm" href="https://dojo.bylearn.com.br/python/manipular-banco-de-dados-com-python/">(fonte)</a>
+                                </div>
+                            </div>
+                            <br><br> 
+                            
+
+                            <!-- título da seção-->
+                            <h2 id="before" class="text-xl sm:text-xl font-semibold text-slate-900 tracking-tight ">Antes do SQL</h2>
+                            <!-- texto comum -->
+                            <p class="mt-4 text-lg text-slate-700 ">Nas décadas de 1960 e 1970, o contexto da gestão de dados era desafiador e fragmentado, pois cada aplicação tinha seu sistema de gerenciamento de banco de dados (SGBD) específico. E, geralmente, envolviam a programação direta de acesso a dados.</p>
+                            <p class="mt-4 text-lg text-slate-700 ">Nisto, cada aplicativo tinha seu próprio formato de armazenamento de dados e não havia uma linguagem comum para consulta e manipulação de informações.</p>
+                            <p class="mt-4 text-lg text-slate-700 ">A solução veio, então, com o desenvolvimento do SQL, como uma linguagem comum para consulta e manipulação de informações.</p>
+                            <p class="mt-4 text-lg text-slate-700 ">Por trás disso, se estabeleceu um padrão que unificou a forma como as pessoas acessam e tratam dados, impactando o processo da gestão de informações.</p>
+                            <br><br>
+
+                            <!-- título da seção-->
+                            <h2 id="origin" class="text-xl sm:text-xl font-semibold text-slate-900 tracking-tight ">O surgimento da SQL</h2>
+                            <!-- texto comum -->
+                            <p class="mt-4 text-lg text-slate-700 ">Em meados da década de 1970, como dito anteriormente, a principal motivação para criar o SQL foi o problema de complexidade dos sistemas de gerenciamento de dados.</p>
+                            <p class="mt-4 text-lg text-slate-700 ">A solução surgiu quando pesquisadores da IBM desenvolveram o SEQUEL (Structured English Query Language), que serviu como base para o SQL que temos acesso nos dias de hoje.</p>
+                            <p class="mt-4 text-lg text-slate-700 ">Em 1979, o SEQUEL foi renomeado para SQL e a primeira especificação da linguagem foi lançada em 1986, tornando-se um padrão.</p>
+                            <p class="mt-4 text-lg text-slate-700 ">Ou seja, a criação do SQL partiu da ideia de uma linguagem declarativa para consultar dados, em que as pessoas usuárias especificam o que querem ao invés de como obtê-lo.</p>
+                            <p class="mt-4 text-lg text-slate-700 ">Por esse caminho, o SQL evoluiu significativamente ao longo dos anos, incorporando recursos avançados e expandindo sua aplicação para além de bancos de dados relacionais tradicionais.</p>
+                            <p class="mt-4 text-lg text-slate-700 ">Atualmente, o SQL é usado em uma ampla gama de aplicativos, desde análise de dados até sistemas de informações de saúde e gerenciamento de conteúdo da web.</p>
+                            <p class="mt-4 text-lg text-slate-700 ">Assim, como em outras áreas, se você busca uma carreira em tecnologia, análise de dados, ciência de dados ou desenvolvimento de software, o SQL é uma habilidade essencial amplamente valorizada pelas empresas.</p>
+                            <br><br>
+
+                            <!-- título da seção-->
+                            <h2 id="advantages" class="text-xl sm:text-xl font-semibold text-slate-900 tracking-tight ">Vantagens e Desvantagens da linguagem SQL</h2>
+                            <!-- texto comum -->
+                            <p class="mt-4 text-lg text-slate-700 ">Como ocorre em qualquer outra linguagem ou tecnologia, o SQL possui vantagens e desvantagens que dependem do contexto e das necessidades específicas.<br>
+                            Vamos verificar algumas das principais vantagens e desvantagens da linguagem SQL:<br>
+                            <div class="grid justify-center items-center">
+                                <div class="flex-column self-center max-w-fit">
+                                    <img src="../static/sql_2.png">
+                                    <a class="text-sm" href="https://anacardosopsicologa.weebly.com/vantagens-e-desvantagens.html">(fonte)</a>
+                                </div>
+                            </div>
+                            Vantagens:
+                            </p>
+                            <p class="mt-4 text-lg text-slate-700 "><b>Padronização:</b> trata-se de uma linguagem padronizada, o que significa que, independentemente do sistema de gerenciamento de banco de dados (SGBD) que você está usando (por exemplo, MySQL, PostgreSQL, Oracle, SQL Server), a linguagem em si é a mesma. Isso facilita a portabilidade e a aprendizagem.</p>
+                            <p class="mt-4 text-lg text-slate-700 "><b>Facilidade de consulta:</b> oferece uma maneira intuitiva de consultar e recuperar dados de bancos de dados. É uma linguagem declarativa que permite que você especifique o que deseja, em vez de como obtê-lo, tornando as consultas mais compreensíveis.</p>
+                            <p class="mt-4 text-lg text-slate-700 "><b>Integridade de dados:</b> permite a definição de restrições de integridade, como chaves primárias e estrangeiras para garantir que os dados sejam consistentes e confiáveis.<br>
+                            </p>
+                            <p id="disadvantages" class="mt-4 text-lg text-slate-700 ">Desvantagens:</p>
+                            <p class="mt-4 text-lg text-slate-700 "><b>Complexidade:</b> as consultas SQL mais complexas podem se tornar difíceis de escrever e entender, principalmente para iniciantes, tornando-as mais suscetíveis a erros.</p>
+                            <p class="mt-4 text-lg text-slate-700 "><b>Desempenho variável:</b> o desempenho das consultas SQL pode variar dependendo da estrutura do banco de dados, da indexação e do volume de dados. Consultas mal otimizadas podem ser lentas.</p>
+                            <p class="mt-4 text-lg text-slate-700 "><b>Falta de suporte para dados não estruturados:</b> o SQL é otimizado para dados estruturados, o que significa que não é a melhor escolha para armazenar e consultar dados não estruturados, como documentos de texto, áudio ou vídeo.</p>
+                            
+                            <br><br>
+
+                            <!-- título da seção-->
+                            <h2 id="uses" class="text-xl sm:text-xl font-semibold text-slate-900 tracking-tight ">Onde o SQL pode ser utilizado</h2>
+                            <!-- texto comum -->
+                            <p class="mt-4 text-lg text-slate-700 "><b>Desenvolvimento de Aplicativos Web:</b> muitos aplicativos web usam bancos de dados para armazenar informações. O SQL pode ser utilizado para criar consultas que recuperem, inserem, atualizem e excluam dados em tempo real.</p>
+                            <p class="mt-4 text-lg text-slate-700 "><b>Análise de Dados e Business Intelligence (BI):</b> A execução de consultas em bancos de dados para análise de dados, geração de relatórios e painéis de controle é um processo no qual o SQL desempenha um papel fundamental. Ferramentas de BI geralmente usam SQL para recuperar informações com eficácia.</p>
+                            <p class="mt-4 text-lg text-slate-700 "><b>Ciência de Dados e Mineração de Dados:</b> Em ciência de dados, o SQL é usado para limpar, transformar e analisar dados armazenados em bancos de dados. Ele é fundamental para consultas complexas e agregação de dados.</p>
+                            <p class="mt-4 text-lg text-slate-700 "><b>Aplicações Móveis:</b> Muitos aplicativos móveis usam bancos de dados embutidos que são acessados por meio de SQL para armazenar dados localmente no dispositivo.</p>
+                            <p class="mt-4 text-lg text-slate-700 ">Por isso, mais do que nunca, a carreira em dados está com oportunidades interessantes.</p>
+                            <br>
+                            <div class="grid justify-center items-center">
+                                <div class="flex-column self-center max-w-fit">
+                                    <img src="../static/sql_3.jpg">
+                                    <a class="text-sm" href="https://dojo.bylearn.com.br/python/manipular-banco-de-dados-com-python/">(fonte)</a>
+                                </div>
+                            </div>
+                            <br><br>
+                        </div>
+                    </header>
+
+                    <!-- conteúdo da página (links locais) -->
+                    <div class="fixed z-20 top-[3.8125rem] bottom-0 right-[max(0px,calc(50%-45rem))] w-[19.5rem] py-10 overflow-y-auto hidden xl:block">
+                        <div class="px-8">
+                            <h5 class="text-slate-900 font-semibold mb-4 text-sm leading-6 ">Conteúdo da página</h5>
+                            <ul class="text-slate-700 text-sm leading-6">
+                                <li>
+                                    <a href="#introduction" class="block py-1 ">Introdução</a>
+                                </li>
+                                <li>
+                                    <a href="#before" class="block py-1 hover:text-slate-900 ">Antes do SQL</a>
+                                </li>
+                                <li>
+                                    <a href="#origin" class="block py-1 hover:text-slate-900 ">O surgimento da SQL</a>
+                                </li>
+                                <li>
+                                    <a href="#advantages" class="block py-1 hover:text-slate-900 ">Vantagens</a>
+                                </li>
+                                <li>
+                                    <a href="#disadvantages" class="block py-1 hover:text-slate-900 ">Desvantagens</a>
+                                </li>
+                                <li>
+                                    <a href="#uses" class="block py-1 hover:text-slate-900 ">Onde usar o SQL?</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

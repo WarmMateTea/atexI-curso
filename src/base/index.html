@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../../dist/output.css" rel="stylesheet">
+</head>
+<body>
+    <div class="sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10  bg-white/95 supports-backdrop-blur:bg-white/60 ">
+        <div class="max-w-8xl mx-auto">
+            <div class="py-4 border-b border-slate-900/10 lg:px-8 lg:border-0 mx-4 lg:mx-0">
+                <div class="relative flex items-center">
+                    <a class="mr-3 flex-none w-[2.0625rem] min-w-fit overflow-hidden md:w-auto">
+                        <img class="max-h-14" src="../static/unifenas masked.png"> <!-- unifenas logo e tal -->
+                    </a>
+                    <a class=" text-sm leading-5 font-medium text-sky-600  bg-sky-400/10 rounded-full py-1 ml-24  px-3 hidden xl:flex items-center hover:bg-sky-400/20">
+                        Minicurso - Introdução ao SQL<!-- link que leva pra home do minicurso-->
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="overflow-hidden">
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 md:px-8">
+            <!-- índice e capítulos -->
+            <div class="hidden lg:block fixed z-20 inset-0 top-[3.8125rem] left-[max(0px,calc(50%-52rem))] right-auto w-[19rem] pt-5 pb-10 pl-8 pr-6 overflow-y-auto">
+                <nav class="lg:text-sm lg:leading-6 relative">
+                    <ul>
+                        <li class="mt-12 lg:mt-8" data-active="true">
+                            <h5 class="mb-8 lg:mb-3 font-semibold text-sky-500"><a href="../base/index.html">Introdução ao SQL</a></h5>
+                        </li>
+
+                        <br>
+                        <li class="mt-12 lg:mt-8">
+                            <h5 class="mb-8 lg:mb-3 font-semibold text-slate-900 ">Unidade 01</h5>
+                            <ul class="space-y-6 lg:space-y-2 border-l border-slate-100">
+                                <li>
+                                    <a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400  text-slate-700 hover:text-slate-900" href="../01/intro_sql.html">Introdução à Linguagem SQL</a>
+                                </li>
+                                <li>
+                                    <a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400  text-slate-700 hover:text-slate-900 " href="../01/intro_sgbd.html">Introdução ao Sistema Gerenciador de Banco de Dados (SGBD)</a>
+                                </li>
+                                <li>
+                                    <a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400  text-slate-700 hover:text-slate-900 " href="../01/exercicios.html">Exercícios de Fixação</a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <br>
+                        <li class="mt-12 lg:mt-8">
+                            <h5 class="mb-8 lg:mb-3 font-semibold text-slate-900 ">Unidade 02</h5>
+                            <ul class="space-y-6 lg:space-y-2 border-l border-slate-100">
+                                <li>
+                                    <a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400  text-slate-700 hover:text-slate-900" href="../02/comandos.html">Apresentação dos Comandos Para Definição de Estruturas e Manipulação de Dados (DQL/DML/DDL/DCL/DTL)</a>
+                                </li>
+                                <li>
+                                    <a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400  text-slate-700 hover:text-slate-900" href="../02/exercicios.html">Exercícios de Fixação</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- conteúdo -->
+            <div class="lg:pl-[19.5rem]">
+                <main class="max-w-3xl mx-auto pt-10 pl-14 xl:max-w-none xl:ml-0 xl:mr-[15.5rem] xl:pr-16">
+                    <header class="mb-10 md:flex md:items-start">
+                        <div id="tema" class="flex-auto max-w-4xl">
+                            <!-- título da unidade -->
+                            <p class="mb-4 text-sm leading-6 font-semibold text-sky-500 ">Unidade 01</p>
+                            <!-- título do capítulo-->
+                            <h1  class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight ">Tema do Curso</h1>
+                            <!-- texto comum -->
+                            <p class="mt-4 text-lg text-slate-700 ">O minicurso terá como propósito apresentar o conceito e a importância da ferramenta SQL (Structured Query Language), ou seja, Linguagem de Consulta Estruturada, que é uma linguagem utilizada para <b>gerenciar, consultar e manipular</b> dados armazenados em  bancos de dados relacionais.</p>
+                            <p class="mt-4 text-lg text-slate-700 ">Esta linguagem foi criada por engenheiros da IBM na década de 1970. O SQL foi a primeira linguagem de DBMS (Sistema de Gerenciamento de Banco de Dados) considerada padrão em comunicação de banco de dados relacional pelo ANSI (American National Standards Institute) e pela ISSO (International Organization for Standardization).</p>
+                            <p class="mt-4 text-lg text-slate-700 ">O SQL é universalmente reconhecido pela sua robustez e versatilidade. Sua ampla adoção em vários setores e plataformas ressalta sua confiabilidade e eficiência, se tornando parte fundamental de muitas aplicações web e aplicativos de celular.</p>
+                            <p class="mt-4 text-lg text-slate-700 ">É importante enfatizar que o SQL, ao invés de ser uma linguagem de programação (ex.: C#, Java, Python, etc) para construir sites, apps ou programas, <b>é uma linguagem que permite que aplicações criem, recuperem e manipulem</b> dados de bancos de dados, e que os profissionais de tecnologia extraiam informações relevantes, façam análises complexas e tomem decisões embasadas em dados sólidos.</p>
+                            <p class="mt-4 text-lg text-slate-700 ">Para qualquer profissional que pretenda trabalhar com bancos de dados, dominar o SQL não é apenas uma recomendação, é uma ótima escolha, pois facilita o gerenciamento e a análise de dados contínuos em diversos sistemas, o que torna, portanto, o SQL uma ferramenta fundamental na área de tecnologia, desempenhando um papel essencial na carreira dos profissionais desta área.</p>
+                            <br><br> 
+
+
+                            <!-- título da seção-->
+                            <h2 id="objetivos" class="text-xl sm:text-xl font-semibold text-slate-900 tracking-tight ">Objetivos Gerais e Específicos do Curso</h2>
+                            <!-- texto comum -->
+                            <p class="mt-4 text-lg text-slate-700 "><b>Objetivos Gerais:</b> O objetivo geral deste curso EAD de curta duração é fornecer, gratuitamente, conhecimentos básicos para que o discente, ao final do curso, seja capaz de compreender os conceitos básicos da linguagem SQL e colocá-los em prática, testando suas habilidades, por meio de um questionário aplicado ao término de cada unidade estudada, fomentando para que o discente busque uma evolução para um novo estágio de conhecimento, a fim de prover fundamentos e técnicas necessárias para trabalhar com bancos de dados relacionais.</p>
+                            <p class="mt-4 text-lg text-slate-700 "><b>Objetivos Específicos:</b><br>
+                                - Introdução a linguagem SQL;<br>
+                                - Introdução a Sistema Gerenciador de Banco de Dados (SGBD);<br>
+                                - Apresentação dos principais comandos para definição de estruturas e manipulação de dados (SQL/DML/DDL/DCL/DTL);<br>
+                                </p>
+                            <br><br>
+
+
+                            <!-- título da seção-->
+                            <h2 id="ementa" class="text-xl sm:text-xl font-semibold text-slate-900 tracking-tight ">Ementa do Curso</h2>
+                            <!-- texto comum -->
+                            <p class="mt-4 text-lg text-slate-700 ">Será oferecido material teórico e prático com abordagens, estratégias e técnicas, a fim de propor uma série de tópicos relacionados ao tema a ser trabalhado ao longo do curso.<br>
+
+                                Na primeira unidade trabalharemos a parte teórica, utilizando a plataforma da Unifenas-MG, adotando a seguinte estrutura:<br>
+                                1. Introdução à Linguagem SQL;<br>
+                                2. Introdução a Sistema Gerenciador de Banco de Dados (SGBD);<br>
+                                3. Questionário com 5 perguntas.<br><br>
+
+                                Na segunda unidade trabalharemos a parte Prática, utilizando a plataforma da Unifenas-MG, adotando a seguinte estrutura:<br>
+                                1. Apresentação dos comandos para definição de estruturas e manipulação de dados (DQL/DML/DDL/DCL/DTL);<br>
+                                2. Criação de um banco de dados para um caso específico;<br>
+                                3. Questionário com 5 perguntas.<br>
+                                </p>
+                        </div>
+                    </header>
+
+                    <!-- conteúdo da página (links locais) -->
+                    <div class="fixed z-20 top-[3.8125rem] bottom-0 right-[max(0px,calc(50%-45rem))] w-[19.5rem] py-10 overflow-y-auto hidden xl:block">
+                        <div class="px-8">
+                            <h5 class="text-slate-900 font-semibold mb-4 text-sm leading-6 ">Conteúdo da página</h5>
+                            <ul class="text-slate-700 text-sm leading-6">
+                                <li>
+                                    <a href="#tema" class="block py-1 font-medium hover:text-slate-900">Tema</a>
+                                </li>
+                                <li>
+                                    <a href="#objetivos" class="block py-1 hover:text-slate-900 ">Objetivos</a>
+                                </li>
+                                <li>
+                                    <a href="#ementa" class="block py-1 hover:text-slate-900 ">Ementa</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

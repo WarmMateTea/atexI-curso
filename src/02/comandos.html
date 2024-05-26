@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../../dist/output.css" rel="stylesheet">
+</head>
+<body>
+    <div class="sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10  bg-white/95 supports-backdrop-blur:bg-white/60 ">
+        <div class="max-w-8xl mx-auto">
+            <div class="py-4 border-b border-slate-900/10 lg:px-8 lg:border-0 mx-4 lg:mx-0">
+                <div class="relative flex items-center">
+                    <a class="mr-3 flex-none w-[2.0625rem] min-w-fit overflow-hidden md:w-auto">
+                        <img class="max-h-14" src="../static/unifenas masked.png"> <!-- unifenas logo e tal -->
+                    </a>
+                    <a class=" text-sm leading-5 font-medium text-sky-600  bg-sky-400/10 rounded-full py-1 ml-24  px-3 hidden xl:flex items-center hover:bg-sky-400/20">
+                        Minicurso - Introdução ao SQL<!-- link que leva pra home do minicurso-->
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="overflow-hidden">
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 md:px-8">
+            <!-- índice e capítulos -->
+            <div class="hidden lg:block fixed z-20 inset-0 top-[3.8125rem] left-[max(0px,calc(50%-52rem))] right-auto w-[19rem] pt-5 pb-10 pl-8 pr-6 overflow-y-auto">
+                <nav class="lg:text-sm lg:leading-6 relative">
+                    <ul>
+                        <li class="mt-12 lg:mt-8">
+                            <h5 class="mb-8 lg:mb-3 font-semibold text-slate-900"><a href="../base/index.html">Introdução ao SQL</a></h5>
+                        </li>
+
+                        <br>
+                        <li class="mt-12 lg:mt-8">
+                            <h5 class="mb-8 lg:mb-3 font-semibold text-slate-900 ">Unidade 01</h5>
+                            <ul class="space-y-6 lg:space-y-2 border-l border-slate-100">
+                                <li data-active="true">
+                                    <a class=" block border-l pl-4 -ml-px border-transparent hover:border-slate-400  text-slate-700 hover:text-slate-900" href="../01/intro_sql.html">Introdução à Linguagem SQL</a>
+                                </li>
+                                <li>
+                                    <a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400  text-slate-700 hover:text-slate-900 " href="../01/intro_sgbd.html">Introdução ao Sistema Gerenciador de Banco de Dados (SGBD)</a>
+                                </li>
+                                <li>
+                                    <a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400  text-slate-700 hover:text-slate-900 " href="../01/exercicios.html">Exercícios de Fixação</a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <br>
+                        <li class="mt-12 lg:mt-8">
+                            <h5 class="mb-8 lg:mb-3 font-semibold text-slate-900 ">Unidade 02</h5>
+                            <ul class="space-y-6 lg:space-y-2 border-l border-slate-100">
+                                <li>
+                                    <a class="block border-l pl-4 -ml-px text-sky-500 border-current font-semibold" href="../02/comandos.html">Apresentação dos Comandos Para Definição de Estruturas e Manipulação de Dados (DQL/DML/DDL/DCL/DTL)</a>
+                                </li>
+                                <li>
+                                    <a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400  text-slate-700 hover:text-slate-900" href="../02/exercicios.html">Exercícios de Fixação</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- conteúdo -->
+            <div class="lg:pl-[19.5rem]">
+                <main class="max-w-3xl mx-auto pt-10 pl-14 xl:max-w-none xl:ml-0 xl:mr-[15.5rem] xl:pr-16">
+                    <header class="mb-10 md:flex md:items-start">
+                        <div class="flex-auto max-w-4xl">
+                            <!-- título da unidade -->
+                            <p class="mb-4 text-sm leading-6 font-semibold text-sky-500 ">Unidade 02</p>
+                            <!-- título do capítulo-->
+                            <h1 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight ">Apresentação dos Comandos Para Definição de Estruturas e Manipulação de Dados (DQL/DML/DDL/DCL/DTL)</h1>
+                            <br><br> 
+
+                            <!-- título da seção-->
+                            <h2 id="sql_commands" class="text-xl sm:text-xl font-semibold text-slate-900 tracking-tight ">O que são comandos SQL?</h2>
+                            <!-- texto comum -->
+                            <p class="mt-4 text-lg text-slate-700 ">De forma geral, os comandos SQL são instruções ou consultas usadas para interagir com um banco de dados relacional.</p>
+                            <p class="mt-4 text-lg text-slate-700 ">Essas instruções SQL permitem que as pessoas ou aplicativos realizem várias operações, como recuperação, inserção, atualização e exclusão de dados em tabelas de banco de dados.</p>
+                            <p class="mt-4 text-lg text-slate-700 ">Os comandos SQL são categorizados em várias <b>linguagens específicas</b>, cada uma com seu propósito de função. Analise a seguir algumas possibilidades:</p>
+                            <p class="mt-4 text-lg text-slate-700 ">Vale ressaltar que muitas empresas geralmente possuem vários profissionais de dados diferentes, como os DBAs, Engenheiro de Dados, Analistas de Dados e daí por diante, e que cada um deles possui uma atuação diferente.</p>
+                            <p class="mt-4 text-lg text-slate-700 ">Dessa forma, nem todas as pessoas vão usar todos os comandos. Inclusive, o uso acidental de um comando pode resultar na perda de dados valiosos.</p>
+                            <p class="mt-4 text-lg text-slate-700 ">Nesses casos, geralmente existem camadas de proteção de ações que podem ser executadas por cada grupo, dependendo da sua necessidade.</p>
+                            <p class="mt-4 text-lg text-slate-700 ">Para uma abordagem mais aprofundada, considere ler o artigo sobre Comandos básicos, que apresenta um pouco mais sobre os principais comandos SQL.</p>
+                            <p class="mt-4 text-lg text-slate-700 ">A linguagem SQL é uma só, porém ela é dividida em tipos de acordo com a funcionalidade dos comandos.</p>
+                            <br><br>
+
+                            <!-- título da seção-->
+                            <h2 class="text-xl sm:text-xl font-semibold text-slate-900 tracking-tight ">Apresentação dos Subconjuntos do SQL(DQL/DML/DDL/DCL/DTL)</h2>
+                            <br>
+
+                            <!-- título da seção-->
+                            <h2 id="dql" class="text-xl sm:text-xl font-semibold text-slate-900 tracking-tight ">DQL (Data Query Language)</h2>
+                            <p class="mt-4 text-lg text-slate-700 ">Os comandos DQL são usados para consultas:</p>
+                            <p class="mt-4 text-lg text-slate-700 "><b>SELECT: Recupera dados</b> de uma ou mais tabelas do banco de dados. É o comando principal para consultas.</p>
+                            <p class="mt-4 text-lg text-slate-700 "><b>COMANDO</b>: SELECT * FROM Clientes;</p>
+                            <p class="mt-4 text-lg text-slate-700 ">Então, por exemplo, suponha que temos uma tabela chamada "<b>Clientes</b>" com as colunas ID, Nome e Idade, e queremos recuperar todos os registros desta tabela.</p>
+                            <br><br>
+
+                            <!-- título da seção-->
+                            <h2 id="dml" class="text-xl sm:text-xl font-semibold text-slate-900 tracking-tight ">DML (Data Manipulation Language)</h2>
+                                <p class="mt-4 text-lg text-slate-700 ">Os comandos DML são usados para manipular os dados: </p>
+                                <p class="mt-4 text-lg text-slate-700 "><b>INSERT</b>: O comando INSERT é usado para <b>adicionar novos registros</b> a uma tabela.</p>
+                                <p class="mt-4 text-lg text-slate-700 "><b>COMANDO</b>: INSERT INTO Clientes (Nome, Idade) VALUES ('João', 30);</p>
+                                <p class="mt-4 text-lg text-slate-700 ">Com este comando, será adicionado um novo registro com o nome João e idade 30 à tabela "<b>Clientes</b>".</p>
+                                <p class="mt-4 text-lg text-slate-700 "><b>UPDATE</b>: O comando UPDATE é usado para <b>modificar registros existentes</b> em uma tabela.</p>
+                                <p class="mt-4 text-lg text-slate-700 "><b>COMANDO</b>: UPDATE Clientes SET Nome = 'Maria' WHERE ID = 1;</p>
+                                <p class="mt-4 text-lg text-slate-700 ">Com este comando, será realizada a atualização do nome do cliente com ID 1	para Maria.</p>
+                                <p class="mt-4 text-lg text-slate-700 "><b>DELETE</b>: O comando DELETE é usado para <b>remover registros</b> de uma tabela. </p>
+                                <p class="mt-4 text-lg text-slate-700 "><b>COMANDO</b>: DELETE FROM Clientes WHERE ID = 2;</p>
+                                <p class="mt-4 text-lg text-slate-700 ">Com este comando, é possível excluir o cliente com ID 2 da tabela Clientes.</p>
+                                <br><br>
+
+                            <!-- título da seção-->
+                            <h2 id="ddl" class="text-xl sm:text-xl font-semibold text-slate-900 tracking-tight ">DDL (Data Definition Language)</h2>
+                                <p class="mt-4 text-lg text-slate-700 ">Os comandos DDL são usados para <b>definir a estrutura</b> do banco de dados:</p>
+                                <p class="mt-4 text-lg text-slate-700 "><b>CREATE</b>: Cria objetos de banco de dados, como tabelas, índices, visões e procedimentos armazenados.</p>
+                                <p class="mt-4 text-lg text-slate-700 "><b>COMANDO</b>: CREATE TABLE usuario (id INT, nome VARCHAR (255));</p>
+                                <p class="mt-4 text-lg text-slate-700 ">Os bancos de dados relacionais guardam seus dados dentro de tabelas que são divididas em colunas. Desta forma, veremos abaixo a criação de uma tabela de usuário. Ao criar, especificaremos as suas colunas e quais tipos de dados elas irão receber (neste caso, um ID e o nome do usuário).</p>
+                                <p class="mt-4 text-lg text-slate-700 "><b>ALTER</b>: Modifica a estrutura de objetos de banco de dados existentes, como adicionar ou remover colunas de tabelas.</p>
+                                <p class="mt-4 text-lg text-slate-700 "><b>COMANDO</b>: ALTER TABLE usuario ADD idade INT AFTER nome;</p>
+                                <p class="mt-4 text-lg text-slate-700 ">No exemplo, adicionaremos uma nova coluna a nossa tabela de usuário criada acima. Esta nova coluna “idade” será criada após a nossa coluna “nome”, desta forma, usaremos:</p>
+                                <p class="mt-4 text-lg text-slate-700 "><b>DROP</b>: Exclui objetos de banco de dados, como tabelas, índices ou visões.</p>
+                                <p class="mt-4 text-lg text-slate-700 "><b>COMANDO</b>: DROP DATABASE banco_teste;<br>DROP TABLE usuario;</p>
+                                <p class="mt-4 text-lg text-slate-700 ">O comando <b>DROP</b> é utilizado para remoção de uma tabela ou do banco de dados por completo.</p>
+                                <br><br>
+
+                            <!-- título da seção-->
+                            <h2 id="dcl" class="text-xl sm:text-xl font-semibold text-slate-900 tracking-tight ">DCL (Data Control Language)</h2>
+                                <p class="mt-4 text-lg text-slate-700 ">Os comandos DCL <b>controlam permissões</b> de acesso e os comandos:</p>
+                                <p class="mt-4 text-lg text-slate-700 "><b>GRANT</b>: Concede permissões a usuários ou funções para acessar objetos de banco de dados. </p>
+                                <p class="mt-4 text-lg text-slate-700 "><b>REVOKE</b>: Remove permissões previamente concedidas a usuários.</p>
+                                <br><br>
+
+                                
+                            <!-- título da seção-->
+                            <h2 id="dtl" class="text-xl sm:text-xl font-semibold text-slate-900 tracking-tight ">DTL (Data Transaction Language) - Linguagem de Transação de Dados.</h2>
+                                <p class="mt-4 text-lg text-slate-700 ">São os comandos para <b>controle de transação</b>:</p>
+                                <p class="mt-4 text-lg text-slate-700 "><b>EGIN TRAN (OU BEGIN TRANSACTION)</b> - Marca o começo de uma transação no banco de dados que pode ser completada ou não.</p>
+                                <p class="mt-4 text-lg text-slate-700 "><b>COMMIT</b> - Envia todos os dados da transação permanentemente para o banco de dados.</p>
+                                <p class="mt-4 text-lg text-slate-700 "><b>ROLLBACK</b> - Desfaz as alterações feitas na transação realizada</p>
+                                <p class="mt-4 text-lg text-slate-700 ">Cada categoria de comandos tem um propósito específico e é usada em diferentes estágios do ciclo de vida de um banco de dados.</p>
+                                <p class="mt-4 text-lg text-slate-700 ">Essas categorias formam a base do SQL e permitem a administração e manipulação eficazes de dados em um banco de dados relacional.</p>
+                                <p class="mt-4 text-lg text-slate-700 ">Dessa forma, nem todas as pessoas vão usar todos os comandos. Inclusive, o uso acidental de um comando pode resultar na perda de dados valiosos.</p>
+                                <p class="mt-4 text-lg text-slate-700 ">Nesses casos, geralmente existem camadas de proteção de ações que podem ser executadas por cada grupo, dependendo da sua necessidade.</p>
+                                <br>
+
+                                <img src="../static/comandosComunsSQL.jpg">
+                                <br><br>
+
+                            <!-- título da seção-->
+                            <h2 id="example" class="text-xl sm:text-xl font-semibold text-slate-900 tracking-tight ">Criação de um Banco de Dados Para Um Caso Específico</h2>
+                                <br>
+                                <img src="../static/criacaoBDespecifico.png">
+                                <br><br>
+                        </div>
+                    </header>
+
+                    <!-- conteúdo da página (links locais) -->
+                    <div class="fixed z-20 top-[3.8125rem] bottom-0 right-[max(0px,calc(50%-45rem))] w-[19.5rem] py-10 overflow-y-auto hidden xl:block">
+                        <div class="px-8">
+                            <h5 class="text-slate-900 font-semibold mb-4 text-sm leading-6 ">Conteúdo da página</h5>
+                            <ul class="text-slate-700 text-sm leading-6">
+                                <li>
+                                    <a href="#sql_commands" class="block py-1 hover:text-slate-900 ">O que são comandos SQL?</a>
+                                </li>
+                                <li>
+                                    <a href="#dql" class="block py-1 hover:text-slate-900 ">DQL - Data Query Language</a>
+                                </li>
+                                <li>
+                                    <a href="#dml" class="block py-1 hover:text-slate-900 ">DML - Data Modeling Language</a>
+                                </li>
+                                <li>
+                                    <a href="#ddl" class="block py-1 hover:text-slate-900 ">DDL - Data Definition Language</a>
+                                </li>
+                                <li>
+                                    <a href="#dcl" class="block py-1 hover:text-slate-900 ">DCL - Data Control Language</a>
+                                </li>
+                                <li>
+                                    <a href="#dtl" class="block py-1 hover:text-slate-900 ">DTL - Data Transaction Language</a>
+                                </li>
+                                <li>
+                                    <a href="#example" class="block py-1 hover:text-slate-900 ">Exemplo de criação de um BD</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
